@@ -1,6 +1,5 @@
 *.FxCop
 *.suo
 *.db
-*.csproj
 bin/
 obj/
