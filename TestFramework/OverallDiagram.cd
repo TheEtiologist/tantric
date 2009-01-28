@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Tantric.Graphical.Camera" Collapsed="true">
+    <Position X="4.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Tantric.Graphical.SceneManager" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <AssociationLine Name="Scenes" Type="Tantric.Graphical.Scene" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="8" Y="0.75" />
+        <Point X="4" Y="0.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsCollectionAssociation>
+      <Property Name="Scenes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Tantric.Graphical.Scene" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Tantric.Graphical.Scenes.BlankScene" Collapsed="true">
+    <Position X="4.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Tantric.Graphical.Scenes.FadeImage" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="Tantric.Graphical.Scenes.WorldScene" Collapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Layers" Type="Tantric.World.WorldLayer">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.763" Y="0.196" Height="0.16" Width="0.666" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Camera" Type="Tantric.Graphical.Camera" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="2.062" />
+        <Point X="4.25" Y="2.062" />
+        <Point X="4.25" Y="2.916" />
+        <Point X="4.5" Y="2.916" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.282" Y="0.22" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Camera" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Layers" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="Tantric.Engine" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <AssociationLine Name="Game" Type="Tantric.IGame">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.036" Y="0.06" Height="0.16" Width="0.57" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="CommandInterpreter" Type="Tantric.Scripting.CommandInterpreter" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.5" Y="1.009" />
+        <Point X="11.5" Y="1.505" />
+        <Point X="9.5" Y="1.505" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Instance" Type="Tantric.Engine">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.16" Y="0.306" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Game" />
+      <Property Name="SceneManager" />
+      <Property Name="TrashCompactor" />
+      <Property Name="CommandInterpreter" />
+      <Property Name="Instance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Tantric.Input.InputMap" Collapsed="true">
+    <Position X="4.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Tantric.Logic.GamePlayConductor" Collapsed="true">
+    <Position X="15.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Tantric.Logic.Unit" Collapsed="true">
+    <Position X="4.5" Y="5.25" Width="1.5" />
+    <AssociationLine Name="Goals" Type="Tantric.Logic.UnitGoal" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="5.25" />
+        <Point X="5.5" Y="4.755" />
+        <Point X="5.75" Y="4.755" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.037" Y="0.07" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsCollectionAssociation>
+      <Property Name="Goals" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Tantric.Logic.UnitGoal" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Tantric.Scripting.Command" Collapsed="true">
+    <Position X="6.25" Y="2" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Callback" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Tantric.Scripting.CommandInterpreter" Collapsed="true">
+    <Position X="8" Y="1.25" Width="1.5" />
+    <AssociationLine Name="Commands" Type="Tantric.Scripting.Command" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8" Y="1.688" />
+        <Point X="7.25" Y="1.688" />
+        <Point X="7.25" Y="2" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.897" Y="0.011" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsCollectionAssociation>
+      <Property Name="Commands" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Tantric.Scripting.QuantumLanguage" Collapsed="true">
+    <Position X="6.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Tantric.Scripting.Script" Collapsed="true">
+    <Position X="6.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Tantric.Trash.TrashCompactor" Collapsed="true">
+    <Position X="8" Y="2" Width="1.5" />
+    <AssociationLine Name="Trashables" Type="Tantric.Trash.ITrashable">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.971" Y="0.22" Height="0.16" Width="0.888" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsCollectionAssociation>
+      <Property Name="Trashables" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Tantric.World.WorldLayer" Collapsed="true">
+    <Position X="2.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsCollectionAssociation>
+      <Property Name="Objects" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Tantric.World.WorldObject" Collapsed="true">
+    <Position X="2.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Tantric_Testbed.TantricDemo" Collapsed="true">
+    <Position X="15.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric_Testbed.TestbedGame" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.75" Y="4.5" Width="1.5" />
+    <AssociationLine Name="m_Factory" Type="Tantric_Testbed.TestbedFactory">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="0.154" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="m_Gameplay" Type="Tantric_Testbed.TestbedGameplay" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.062" Y="4.5" />
+        <Point X="14.062" Y="4.125" />
+        <Point X="16.5" Y="4.125" />
+        <Point X="16.5" Y="3.88" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="m_GoalInterpreter" Type="Tantric_Testbed.HumanGoalInterpreter" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.062" Y="4.5" />
+        <Point X="14.062" Y="4.125" />
+        <Point X="12.5" Y="4.125" />
+        <Point X="12.5" Y="3.759" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.016" Y="0.195" Height="0.16" Width="1.242" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>CAAAAAAABAAAABAAACAAAIAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_Factory" />
+      <Field Name="m_Gameplay" />
+      <Field Name="m_GoalInterpreter" />
+    </ShowAsAssociation>
+    <Lollipop Orientation="Bottom" Position="0.2" />
+  </Class>
+  <Class Name="Tantric_Testbed.TestbedGameplay" Collapsed="true">
+    <Position X="15.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAgAAAAAgAAAAABAAAAAAAAA=</HashCode>
+      <FileName>ReplicatorSpecific.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric_Testbed.TestbedFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>ReplicatorSpecific.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Tantric_Testbed.HumanGoalInterpreter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ReplicatorSpecific.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Tantric_Testbed.World.Objects.Human.HumanAssembler" Collapsed="true">
+    <Position X="12" Y="5.25" Width="1.5" />
+    <InheritanceLine Type="Tantric.Logic.Unit" FixedFromPoint="true">
+      <Path>
+        <Point X="6" Y="5.625" />
+        <Point X="12" Y="5.625" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAABAAAgAAgBAAAAgAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>World\Objects\Human\HumanAssembler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric_Testbed.World.Objects.Human.HumanBase" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgAAAAAAAAgAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>World\Objects\Human\HumanBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric_Testbed.World.Objects.Human.HumanStatistics" Collapsed="true">
+    <Position X="16.25" Y="5.25" Width="1.5" />
+    <AssociationLine Name="m_Statistics" Type="Tantric_Testbed.World.Objects.Human.StatisticSet">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.029" Y="-0.234" Height="0.16" Width="0.91" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAkAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>World\Objects\Human\HumanStatistics.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="m_Statistics" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Tantric_Testbed.World.Objects.Human.StatisticSet" Collapsed="true">
+    <Position X="13.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>World\Objects\Human\HumanStatistics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric_Testbed.World.Objects.PurelyVisual" Collapsed="true">
+    <Position X="2.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAABAAAoAAABAAAAgAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>World\Objects\PurelyVisual.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Tantric.IGame" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <AssociationLine Name="ObjFactory" Type="Tantric.World.IObjectFactory" FixedToPoint="true">
+      <Path>
+        <Point X="14.438" Y="1.009" />
+        <Point X="14.438" Y="2.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.878" Y="0.037" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="GamePlayConductor" Type="Tantric.Logic.GamePlayConductor" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.438" Y="1.009" />
+        <Point X="14.438" Y="1.875" />
+        <Point X="16.312" Y="1.875" />
+        <Point X="16.312" Y="2.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.346" Y="0.037" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="GoalInterpreter" Type="Tantric.Logic.IGoalInterpreter" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.438" Y="1.009" />
+        <Point X="14.438" Y="1.875" />
+        <Point X="12.703" Y="1.875" />
+        <Point X="12.703" Y="2.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.119" Y="0.029" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="ObjFactory" />
+      <Property Name="GamePlayConductor" />
+      <Property Name="GoalInterpreter" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="Tantric.Logic.IGoalInterpreter" Collapsed="true">
+    <Position X="11.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Tantric.Trash.ITrashable" Collapsed="true">
+    <Position X="8" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Clean" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="Tantric.World.IObjectFactory" Collapsed="true">
+    <Position X="13.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Enum Name="Tantric.Graphical.Scenes.FadeMode" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Delegate Name="Tantric.Scripting.CommandCallback" Collapsed="true">
+    <Position X="6.25" Y="1" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="Tantric.Trash.CleanHandler" Collapsed="true">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

@@ -1,0 +1,17 @@
+﻿EntryScript
+{
+	// Add a world scene
+	AddScene WorldScene MainScene
+	// Add a layer
+	LayerSetup
+	AddObject MainScene.PrimaryLayer HumanAssembler FirstObject H_ASS.PNG
+	AddObject MainScene.BackgroundLayer PurelyVisual PureVisual Background.PNG
+}
+
+LayerSetup
+{
+	//Set up our layers
+	AddLayer MainScene BackgroundLayer 10.0
+	AddLayer MainScene SecondaryLayer 2.0
+	AddLayer MainScene PrimaryLayer 1.0
+}

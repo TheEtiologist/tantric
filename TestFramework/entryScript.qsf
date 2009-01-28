@@ -1,0 +1,33 @@
+﻿EntryScript
+{
+	// Add a world scene
+	AddScene WorldScene MainScene
+	// Add a layer
+	LayerSetup
+	AddObject MainScene.PrimaryLayer HumanAssembler FirstObject H_ASS 300.0 300.0
+	AddObject MainScene.PrimaryLayer HumanAssembler SecondObject H_ASS 600.0 300.0
+	AddObject MainScene.PrimaryLayer HumanAssembler ThirdObject H_ASS 900.0 300.0
+	AddObject MainScene.PrimaryLayer HumanAssembler FourthObject H_ASS 1200.0 300.0
+	AddObject MainScene.PrimaryLayer HumanAssembler FifthObject H_ASS 300.0 600.0
+	AddObject MainScene.PrimaryLayer HumanAssembler SixthObject H_ASS 600.0 600.0
+	AddObject MainScene.PrimaryLayer HumanAssembler aFirstObject H_ASS 900.0 600.0
+	AddObject MainScene.PrimaryLayer HumanAssembler aSecondObject H_ASS 1200.0 600.0
+	AddObject MainScene.PrimaryLayer HumanAssembler aThirdObject H_ASS 300.0 900.0
+	AddObject MainScene.PrimaryLayer HumanAssembler aFourthObject H_ASS 600.0 900.0
+	AddObject MainScene.PrimaryLayer HumanAssembler aFifthObject H_ASS 900.0 900.0
+	AddObject MainScene.PrimaryLayer HumanAssembler aSixthObject H_ASS 1200.0 900.0
+	AddObject MainScene.PrimaryLayer HumanAssembler bThirdObject H_ASS 300.0 1200.0
+	AddObject MainScene.PrimaryLayer HumanAssembler bFourthObject H_ASS 600.0 1200.0
+	AddObject MainScene.PrimaryLayer HumanAssembler bFifthObject H_ASS 900.0 1200.0
+	AddObject MainScene.PrimaryLayer HumanAssembler bSixthObject H_ASS 1200.0 1200.0
+	AddObject MainScene.BackgroundLayer PurelyVisual PureVisual Background 512.0 384.0
+	AddObject MainScene.SecondaryLayer PurelyVisual ChrisObject Static 0.0 0.0
+}
+
+LayerSetup
+{
+	//Set up our layers
+	AddLayer MainScene BackgroundLayer 10.0
+	AddLayer MainScene SecondaryLayer 5.0
+	AddLayer MainScene PrimaryLayer 1.0
+}

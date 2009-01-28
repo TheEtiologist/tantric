@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Tantric.Graphical.Camera" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIACAAAKAgAAIAAAQAEAAAAggAAAAEAgEABAA=</HashCode>
+      <FileName>Graphical\Camera.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tantric.Graphical.SceneManager" Collapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQhAAAAAAAAAgAAAAAQAAAAQEAQAABACAAEAAAAEAA=</HashCode>
+      <FileName>Graphical\SceneManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric.Graphical.Scene" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECRkAACAIgEAAgAAAAAAACwACAAAAAAQECAAAAUEQQA=</HashCode>
+      <FileName>Graphical\Scenes\Scene.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Tantric.Graphical.Scenes.BlankScene" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAACAAAAAAgAAAAAAAAAAAAAAAAAAACAAAAEEAQA=</HashCode>
+      <FileName>Graphical\Scenes\BlankScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric.Graphical.Scenes.FadeImage" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAhAACABCAAAgBAgAAAAEAAAAAAgCAgACAAAAEEAQA=</HashCode>
+      <FileName>Graphical\Scenes\FadeImage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Tantric.Graphical.Scenes.WorldScene" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABiAICAACAAAoAAgAAAAAAAAAAAAAAAgCgAAAEEAQA=</HashCode>
+      <FileName>Graphical\Scenes\WorldScene.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Tantric.Engine" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAEAAAAAAAAwAoAAAEJCAAIAAACAAAQAAAAAAACgQ=</HashCode>
+      <FileName>TantricEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric.Input.InputMap" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAABAAAAAAABAAAKAAAAAAA=</HashCode>
+      <FileName>Input\InputMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric.Logic.AIConductor" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Logic\AIConductor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric.Logic.GamePlayConductor" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAgAAAAAgAAABAAAAAAAAABA=</HashCode>
+      <FileName>Logic\GameplayConductor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric.Logic.PhysicsConductor" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Logic\PhysicsConductor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric.Logic.Unit" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAQAAAARAAAAAAAAAAAAACABCAAAIAA=</HashCode>
+      <FileName>Logic\Unit Logic\Unit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric.Logic.UnitGoal" Collapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAACAAAAABAAAAAAAAAAIQAAkAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Unit Logic\UnitGoal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric.Scripting.Command" Collapsed="true">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAgAAAAAAAAIAAgAAgAAAAAAAAAAAQAAAAAAAAAAQAA=</HashCode>
+      <FileName>Scripting\Command.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric.Scripting.CommandInterpreter" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAgAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Scripting\CommandInterpreter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric.Scripting.QuantumLanguage" Collapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAEAAAAAAAAAAAAABAAQAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Scripting\QuantumLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric.Scripting.Script" Collapsed="true">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAIAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Scripting\Script.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric.Trash.TrashCompactor" Collapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAAAAAAEAAIQAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Trash\TrashCompactor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric.World.WorldLayer" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAIgAAAAAAAAgABAAAAhEgAAAAAAAAAEA=</HashCode>
+      <FileName>World\WorldLayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tantric.World.WorldObject" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAACAAAqAgAAIAAAwAEAAAAggAEAAEAgEABAA=</HashCode>
+      <FileName>World\WorldObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Tantric.IGame" Collapsed="true">
+    <Position X="7.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IGame.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Tantric.Logic.IGoalInterpreter" Collapsed="true">
+    <Position X="9.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Unit Logic\GoalInterpreter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Tantric.Trash.ITrashable" Collapsed="true">
+    <Position X="7.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Trash\Trash.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Tantric.World.IObjectFactory" Collapsed="true">
+    <Position X="11.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>World\IObjectFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Tantric.World.IPositionable" Collapsed="true">
+    <Position X="13" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAgAAIAAAAAEAAAAggAAAAEAgAABAA=</HashCode>
+      <FileName>World\IPositionable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Tantric.Graphical.Scenes.FadeMode" Collapsed="true">
+    <Position X="7.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Graphical\Scenes\FadeImage.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="Tantric.Scripting.CommandCallback" Collapsed="true">
+    <Position X="9.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Scripting\Command.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Tantric.Trash.CleanHandler" Collapsed="true">
+    <Position X="7.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Trash\Trash.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
