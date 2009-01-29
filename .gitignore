@@ -1,0 +1,5 @@
+*.FxCop
+*.suo
+*.db
+bin/
+obj/
