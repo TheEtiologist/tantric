@@ -21,7 +21,6 @@
 	AddObject MainScene.PrimaryLayer HumanAssembler bFifthObject H_ASS 900.0 1200.0
 	AddObject MainScene.PrimaryLayer HumanAssembler bSixthObject H_ASS 1200.0 1200.0
 	AddObject MainScene.BackgroundLayer PurelyVisual PureVisual Background 512.0 384.0
-	AddObject MainScene.SecondaryLayer PurelyVisual ChrisObject Static 0.0 0.0
 }
 
 LayerSetup

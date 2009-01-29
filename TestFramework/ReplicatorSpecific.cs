@@ -4,23 +4,40 @@ using System.Text;
 
 namespace Tantric_Testbed
 {
+    enum SelectingState
+    {
+        Idle,
+        Started,
+        Finished
+    };
+
     public class TestbedGameplay : Tantric.Logic.GamePlayConductor
     {
         List<Tantric.Logic.Unit> m_Selected;
+        Microsoft.Xna.Framework.Vector4 m_SelectionBox;
+        SelectingState m_SelectionState;
         Tantric.Graphical.Camera m_Camera;
 
         public TestbedGameplay()
         {
             m_Selected = new List<Tantric.Logic.Unit>();
+            m_SelectionBox = new Microsoft.Xna.Framework.Vector4(0, 0, 1, 1);
         }
 
         public override void Evaluate(Microsoft.Xna.Framework.GameTime gt)
         {
-            m_Selected.Clear();
-            foreach (Tantric.World.WorldLayer layer in Orchestra.Layers)
-                foreach (Tantric.World.WorldObject obj in layer.Objects.Values)
-                    if (obj is World.Objects.Human.HumanAssembler)
-                        m_Selected.Add(obj as World.Objects.Human.HumanAssembler);
+            if (m_Camera != null && m_SelectionState == SelectingState.Finished)
+            {
+                foreach (Tantric.World.WorldLayer layer in Orchestra.Layers)
+                    foreach (Tantric.World.WorldObject obj in layer.Objects.Values)
+                        if (obj is World.Objects.Human.HumanAssembler)
+                            if (obj.Position.X > m_SelectionBox.X + m_Camera.Position.X && obj.Position.X < m_SelectionBox.Z + m_Camera.Position.X)
+                                if (obj.Position.Y > m_SelectionBox.Y + m_Camera.Position.Y && obj.Position.Y < m_SelectionBox.W + m_Camera.Position.Y)
+                                    if( !m_Selected.Contains(obj as World.Objects.Human.HumanAssembler))
+                                        m_Selected.Add(obj as World.Objects.Human.HumanAssembler);
+                m_SelectionBox.X = m_SelectionBox.Y = m_SelectionBox.Z = m_SelectionBox.W = 0;
+                m_SelectionState = SelectingState.Idle;
+            }
             if (m_Camera == null && Orchestra != null)
                 m_Camera = Orchestra.Camera;
         }
@@ -28,6 +45,7 @@ namespace Tantric_Testbed
         public override void ProcessInput(string Pressed, Microsoft.Xna.Framework.Vector2 Mouse)
         {
             // TODO: Clean up formation algorithm
+            // TODO; Redesign input, it's ugly.
             #region Formation
             if (m_Selected != null && Pressed == "Mouse_Right" && m_Camera != null)
             {
@@ -74,6 +92,23 @@ namespace Tantric_Testbed
                 }
             }
             #endregion
+            
+            if (Pressed == "Mouse_Left" && m_SelectionState == SelectingState.Idle)
+            {
+                m_SelectionBox.X = Mouse.X;
+                m_SelectionBox.Y = Mouse.Y;
+                m_SelectionState = SelectingState.Started;
+                m_Selected.Clear();
+            }
+            else if (Pressed == "Mouse_Left" && m_SelectionState == SelectingState.Started)
+            {
+                m_SelectionBox.Z = Mouse.X;
+                m_SelectionBox.W = Mouse.Y;
+            }
+            else
+            {
+                m_SelectionState = SelectingState.Finished;
+            }
             if (m_Camera != null && Pressed == "Camera_Left")
                 m_Camera.Translate(new Microsoft.Xna.Framework.Vector2(-1, 0) * World.Objects.Human.HumanStatistics.GetStatistic("Camera", "Speed"));
             if (m_Camera != null && Pressed == "Camera_Right")
